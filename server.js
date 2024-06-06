@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(session({ // REMOVE IF NOT NEEDED
   secret: "What is this secret for??", // CHANGE!
-  resave: false,
+  resave: true,
   saveUninitialized: false
 }))
 

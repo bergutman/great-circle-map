@@ -89,14 +89,14 @@ class SvgMap extends Component {
           <svg id="svg" viewBox={`-25 -25 ${this.diameter + 50} ${this.diameter + 50}`}>
             <defs>
               <radialGradient id="ocean-gradient" cx="65%" cy="20%">
-                <stop offset="0%" stopColor="#799" />
-                <stop offset="100%" stopColor="#368" />
+                <stop offset="0%" stopColor="navy" />
+                <stop offset="100%" stopColor="navy" />
               </radialGradient>
             </defs>
             <defs>
               <radialGradient id="land-gradient" cx="65%" cy="20%">
-                <stop offset="0%" stopColor="#765" />
-                <stop offset="100%" stopColor="#543" />
+                <stop offset="0%" stopColor="#fff" />
+                <stop offset="100%" stopColor="#fff" />
               </radialGradient>
             </defs>
             <circle

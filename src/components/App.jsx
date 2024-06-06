@@ -16,7 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isSidebarDocked: true,
+      isSidebarDocked: false,
       isSidebarOpen: false,
       transitionsActive: false
     };
@@ -71,11 +71,12 @@ class App extends Component {
         <div id="main">
           {isMobile && <SearchInput />}
           <div id="map-wrapper">
+            {/*
             <ButtonGroup
               isSidebarDocked={this.state.isSidebarDocked}
               toggleSidebarDock={this.toggleSidebarDock}
               handleSetSidebarOpen={this.handleSetSidebarOpen}
-            />
+            /> */}
             <Fragment
               withConditions={({ pathname }) => {
                 return pathname === '/satellite' || pathname === '/roadmap';

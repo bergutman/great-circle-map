@@ -31,7 +31,7 @@ function MapSelection({ dispatch, buttonClass }) {
           </ReactTooltip>
         </div>
       </Fragment>
-      <Fragment withConditions={({ pathname }) => pathname !== '/satellite'}>
+      {/*<Fragment withConditions={({ pathname }) => pathname !== '/satellite'}>
         <div>
           <button
             data-tip
@@ -66,7 +66,7 @@ function MapSelection({ dispatch, buttonClass }) {
             <span>Roadmap</span>
           </ReactTooltip>
         </div>
-      </Fragment>
+          </Fragment>*/}
     </div>
   );
 }

@@ -6,13 +6,39 @@
 }
 
 #svg {
-  background: lightsteelblue;
+  --s: 332px;
+  /* control the size*/
+  --c1: #232333;
+  --c2: black;
+
+  --_g: #0000 52%, var(--c1) 54% 57%, #0000 59%;
+  background:
+    radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s)/2),
+    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s)/2) 0,
+    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+    radial-gradient(farthest-side at 50% -33.33%, var(--_g)),
+    var(--c2);
+  background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
   width: 100%;
   // height: 100%;
   flex-grow: 1;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
+  animation: waveAnimation 10s infinite linear;
+}
+
+
+@keyframes waveAnimation {
+  0% {
+    background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
+  }
+  50% {
+    background-size: calc(var(--s)/3.667) var(--s), var(--s) calc(var(--s)/2.667);
+  }
+  100% {
+    background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
+  }
 }
 
 #svg:active {
@@ -34,7 +60,7 @@
 
 #graticule {
   fill: none;
-  stroke: #222;
+  // stroke: #222;
   stroke-width: 0.2;
   opacity: 0.8;
 }
